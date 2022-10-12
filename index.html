@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-12 20:49:05" itemprop="dateModified" datetime="2022-10-12T20:49:05+08:00">2022-10-12</time>
+                <time title="修改时间：2022-10-12 20:51:30" itemprop="dateModified" datetime="2022-10-12T20:51:30+08:00">2022-10-12</time>
               </span>
 
           
@@ -203,10 +203,8 @@
 
       
           <p>Welcome to <a target="_blank" rel="noopener" href="https://chenshare.top/">Tokaiの小屋</a>!<br>在这里，我们一起学习<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/529408">DP</a></p>
-<h2 id="Here-we-go"><a href="#Here-we-go" class="headerlink" title="Here we go"></a>Here we go</h2><p>###LIS</p>
-<p>最长递增子序列(LIS):<br>（比如导弹拦截，之后的拦截高度达不到前一次的）<br>双重循环<br>外一层去计算出每个i的dp<br>内一层去得到满足：前面比a[i]小，且dp比它大的dp<br>最后遍历一遍i，得到最大的dp[i]</p>
-<p>###最大连续子序列和</p>
-<p>法一：<br>（DP）</p>
+<h2 id="Here-we-go"><a href="#Here-we-go" class="headerlink" title="Here we go"></a>Here we go</h2><h3 id="LIS"><a href="#LIS" class="headerlink" title="LIS"></a>LIS</h3><p>最长递增子序列(LIS):<br>（比如导弹拦截，之后的拦截高度达不到前一次的）<br>双重循环<br>外一层去计算出每个i的dp<br>内一层去得到满足：前面比a[i]小，且dp比它大的dp<br>最后遍历一遍i，得到最大的dp[i]</p>
+<h3 id="最大连续子序列和"><a href="#最大连续子序列和" class="headerlink" title="最大连续子序列和"></a>最大连续子序列和</h3><p>法一：<br>（DP）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(int i = 1; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">  //状态转移方程</span><br><span class="line">  dp[i] = max(A[i],dp[i-1] + A[i]); </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
 <p>法二：<br>（某种策略，丢弃负数）</p>
